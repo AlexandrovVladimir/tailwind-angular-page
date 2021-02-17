@@ -1,0 +1,13 @@
+<app-panel-info [title]="title"
+                [text]="text"
+                (openModalEvent)="openModal()">
+</app-panel-info>
+<div class="grid grid-cols-3 gap-2 justify-items-auto">
+  <button type="button"
+          class="text-base font-semibold h-12 border border-gray-200 rounded hover:border-blue-500 focus:outline-none"
+          *ngFor="let btn of corniceProfileItems"
+          [class.border-blue-500]="btn.selected"
+          (click)="selectedBtn(btn)">
+    {{ btn.value }}
+  </button>
+</div>

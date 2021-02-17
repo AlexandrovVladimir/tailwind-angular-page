@@ -1,0 +1,9 @@
+:host {
+  display: none;
+
+  .modal {
+    @media screen and (min-height: 500px) {
+      align-items: center;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<app-panel-info [title]="title"
+                [text]="text"
+                [modalId]="modalId"
+                (openModalEvent)="openModal()">
+</app-panel-info>
+<div class="flex flex-wrap items-center">
+  <button type="button"
+          class="text-base font-semibold h-12 border border-gray-200 rounded mr-2 hover:border-blue-500 focus:outline-none"
+          *ngFor="let btn of corniceRange"
+          [class.border-blue-500]="btn.selected"
+          (click)="selectedBtn(btn)">
+    {{ btn.value }}
+  </button>
+</div>

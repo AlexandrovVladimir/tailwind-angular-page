@@ -1,0 +1,23 @@
+.container {
+  max-width: 1200px;
+
+  .main-photo {
+    flex-basis: 100%;
+    @media screen and (min-width: 768px) {
+      flex-basis: 0;
+    }
+  }
+
+  .bg-main-photo {
+    height: 50vh; // used it because 'Scale to fit Height and Width in task'
+    //padding-top: 56.25%;
+  }
+
+  aside {
+    flex-basis: 100%;
+
+    @media screen and (min-width: 768px) {
+      flex-basis: 300px;
+    }
+  }
+}

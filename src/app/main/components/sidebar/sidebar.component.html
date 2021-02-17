@@ -1,0 +1,170 @@
+<div class="pl-2 pb-4 relative h-full md:px-2 ">
+  <div>
+    <app-sticky-header class="sticky top-0"
+                       [text]="'Cornice'"
+                       [modalId]="'cornice-range-modal'">
+    </app-sticky-header>
+    <div class="pt-2 cornice-range">
+      <app-range [title]="'Cornice Range'"
+                 [text]="'Which cornice range is right for you?'"
+                 [modalId]="'cornice-range-modal'"
+                 (openModalEvent)="openModal('cornice-range-modal')">
+      </app-range>
+    </div>
+    <div class="pt-2 cornice-profile">
+      <app-cornice-profile [title]="'Cornice Profile'"
+                           [text]="'Which cornice profile is right for you?'"
+                           [modalId]="'cornice-profile-modal'"
+                           (openModalEvent)="openModal('cornice-profile-modal')">
+      </app-cornice-profile>
+    </div>
+    <div class="py-2 pr-2 md:pr-0 cornice-paint">
+      <app-paint [title]="'Cornice Paint'"></app-paint>
+    </div>
+  </div>
+
+  <div>
+    <app-sticky-header [text]="'Ceiling'"></app-sticky-header>
+    <div class="pt-2 ceiling-range">
+      <app-range [title]="'Ceiling Range'"
+                 [text]="'Which ceiling range is right for you?'"
+                 [modalId]="'ceiling-range-modal'"
+                 (openModalEvent)="openModal('ceiling-range-modal')">
+      </app-range>
+    </div>
+    <div class="py-2 ceiling-product">
+      <app-color-palette [title]="'Ceiling Product'"
+                         [text]="'Which ceiling product is right for you?'"
+                         [paletteName]="'Ceiling'"
+                         [items]="ceilingProducts"
+                         [modalId]="'ceiling-palette-modal'"
+                         (openModalEvent)="openModal('ceiling-palette-modal')">
+      </app-color-palette>
+    </div>
+  </div>
+
+  <div>
+    <app-sticky-header [text]="'Feature Wall'"></app-sticky-header>
+    <div class="pt-2 wall-range">
+      <app-range [title]="'Wall Range'"
+                 [text]="'Which wall range range is right for you?'"
+                 [modalId]="'feature-range-modal'"
+                 (openModalEvent)="openModal('feature-range-modal')">
+      </app-range>
+    </div>
+    <div class="py-2 wall-product">
+      <app-color-palette [title]="'Wall Product'"
+                         [text]="'Which wall product is right for you?'"
+                         [paletteName]="'Feature Wall'"
+                         [items]="wallProducts"
+                         [modalId]="'feature-palette-modal'"
+                         (openModalEvent)="openModal('feature-palette-modal')">
+      </app-color-palette>
+    </div>
+  </div>
+</div>
+
+<app-modal class="animate__animated animate__fadeIn animate__faster" id="cornice-range-modal">
+  <div class="relative">
+    <div class="uppercase font-medium">
+      Cornice Range Modal
+    </div>
+    <div class="absolute right-0 top-0 cursor-pointer w-6 text-gray-300 hover:text-gray-400"
+         (click)="closeModal('cornice-range-modal')">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </div>
+  </div>
+  <div class="mt-4 max-w-xs">
+    <img src="assets/img/img.jpeg" alt="photo">
+  </div>
+  <div class="mt-4 text-sm">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, facilis, obcaecati! Blanditiis distinctio, doloribus error esse in incidunt iste labore molestias neque nihil omnis, optio, quam quibusdam sequi velit! Mollitia!
+  </div>
+</app-modal>
+
+<app-modal class="animate__animated animate__fadeIn animate__faster" id="cornice-profile-modal">
+  <div class="relative">
+    <div class="uppercase font-medium">
+      Cornice Profile Modal
+    </div>
+    <div class="absolute right-0 top-0 cursor-pointer w-6 text-gray-300 hover:text-gray-400"
+         (click)="closeModal('cornice-profile-modal')">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </div>
+  </div>
+  <div class="mt-4 max-w-xs">
+    <img src="assets/img/img.jpeg" alt="photo">
+  </div>
+</app-modal>
+
+<app-modal class="animate__animated animate__fadeIn animate__faster" id="ceiling-range-modal">
+  <div class="relative">
+    <div class="uppercase font-medium">
+      Ceiling Range Modal
+    </div>
+    <div class="absolute right-0 top-0 cursor-pointer w-6 text-gray-300 hover:text-gray-400"
+         (click)="closeModal('ceiling-range-modal')">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </div>
+  </div>
+  <div class="mt-4">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, facilis, obcaecati!
+  </div>
+</app-modal>
+
+<app-modal class="animate__animated animate__fadeIn animate__faster" id="ceiling-palette-modal">
+  <div class="relative">
+    <div class="uppercase font-medium">
+      Ceiling Modal
+    </div>
+    <div class="absolute right-0 top-0 cursor-pointer w-6 text-gray-300 hover:text-gray-400"
+         (click)="closeModal('ceiling-palette-modal')">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </div>
+  </div>
+  <div class="mt-4">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, facilis, obcaecati!
+  </div>
+</app-modal>
+
+<app-modal class="animate__animated animate__fadeIn animate__faster" id="feature-range-modal">
+  <div class="relative">
+    <div class="uppercase font-medium">
+      Feature Range Modal
+    </div>
+    <div class="absolute right-0 top-0 cursor-pointer w-6 text-gray-300 hover:text-gray-400"
+         (click)="closeModal('feature-range-modal')">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </div>
+  </div>
+  <div class="mt-4">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, facilis, obcaecati!
+  </div>
+</app-modal>
+
+<app-modal class="animate__animated animate__fadeIn animate__faster" id="feature-palette-modal">
+  <div class="relative">
+    <div class="uppercase font-medium">
+      Feature Modal
+    </div>
+    <div class="absolute right-0 top-0 cursor-pointer w-6 text-gray-300 hover:text-gray-400"
+         (click)="closeModal('feature-palette-modal')">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </div>
+  </div>
+  <div class="mt-4">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, facilis, obcaecati!
+  </div>
+</app-modal>

@@ -1,0 +1,7 @@
+button {
+  flex-basis: calc(50% - 0.25rem);
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

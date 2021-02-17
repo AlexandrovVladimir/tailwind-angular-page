@@ -1,0 +1,22 @@
+<app-panel-info [title]="title"></app-panel-info>
+<div class="flex">
+  <div class="h-12 w-12 rounded-md flex-shrink-0 bg-blue-300"></div>
+  <div class="flex flex-wrap pallet">
+    <div class="cursor-pointer rounded-full ml-2 w-5 h-5 pallet-item"
+         *ngFor="let item of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]"
+         [ngClass]="item < 10 ? 'bg-blue-' + item + '00' : 'bg-purple-' + item">
+    </div>
+    <div class="cursor-pointer rounded-full ml-2 w-5 h-5 flex justify-center items-center bg-gray-200 text-gray-500"
+         (click)="open()">
+      <svg class="w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+      </svg>
+    </div>
+  </div>
+</div>
+
+<app-panel *ngIf="isOpen"
+           [paletteName]="'Cornice'"
+           [items]="[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]"
+           (closeEvent)="close()">
+</app-panel>

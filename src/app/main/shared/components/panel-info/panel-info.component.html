@@ -1,0 +1,10 @@
+<div class="text-sm font-semibold"
+     [class.mb-1]="!text"
+     *ngIf="title">
+  {{ title }}
+</div>
+<div class="cursor-pointer text-xs font-light my-1 text-blue-500"
+     *ngIf="text"
+     (click)="openModal()">
+  {{ text }}
+</div>
